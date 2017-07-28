@@ -16,17 +16,90 @@
       p.style.fontSize = '50px';
     }
     // Regular
+
+    console.log('hello');
+
     // Interpolated
+
+    console.log('Hello I am a %s string!', '💩');
+
     // Styled
+
+    // console.log('%c I am some great text', 'font-family: Serif; font-weight: normal; font-size: 20px; font-color: grey');
+
     // warning!
+
+    console.warn('OH NOOO!');
+
     // Error :|
+
+    console.error('💩');
+
     // Info
+
+    console.info('WTF?');
+
     // Testing
+
+    console.assert(1 === 2, 'That is wrong!');
+
     // clearing
+
+    console.clear();
+
     // Viewing DOM Elements
+
+    // const p = document.querrySelector('p');
+    //   console.assert(p.classList.contains('ouch'); 'Thats is wrong!');
+    //
+    // console.dir(p);
+
     // Grouping together
+
+    // dogs.forEach(dog => {
+    //   console.log( `This is ${dog.name}`);
+    //   console.log(`${dog.name} is ${dog.age} years old`);
+    //   console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+    //
+    // });
+
+// console.groupCollapsed = hidden by default
+
+    // dogs.forEach(dog => {
+    //   console.groupCollapsed(`${dog.name}`);
+    //   console.log( `This is ${dog.name}`);
+    //   console.log(`${dog.name} is ${dog.age} years old`);
+    //   console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+    //   console.groupEnd(`${dog.name}`);
+    //
+    // });
+
+// console.group = exposed by default
+
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+      console.log( `This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+
+    });
+
     // counting
+
+    console.count()
+
     // timing
+
+    console.time('fethcing data');
+      fetch('https://api.github.com/users/sirbrenton')
+      // fetch('https://api.github.com/users/wesbos')
+        .then(data => data.json())
+        .then(data => {
+          console.timeEnd('fethcing data');
+          console.log(data);
+        });
+
   </script>
 </body>
 </html>
